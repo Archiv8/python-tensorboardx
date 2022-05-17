@@ -16,10 +16,11 @@
 
 _langname=python
 _relname=tensorboardx
+_casename="tensorboardX"
 
 pkgname="${_langname}-${_relname}"
 pkgver=2.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Tensorboard for PyTorch"
 arch=(
   "any"
@@ -55,14 +56,14 @@ conflicts=(
   "python-tensorboard-git"
 )
 source+=(
-  "https://files.pythonhosted.org/packages/source/${_relname::1}/$_relname/$_relname-$pkgver.tar.gz"
+  "https://files.pythonhosted.org/packages/source/${_casename::1}/$_casename/$_casename-$pkgver.tar.gz"
 )
 sha512sums=(
   "54075b10dc61d9bf4730f4b723c33ecb11c1089cb9534cec9e53d5c14b8bc54d0dc93c2634ff955bb54a3acf41d2591c54fe92f05ebd24a71cf916d9e1867d71"
 )
 
 package() {
-  cd "${srcdir}/${_relname}-${pkgver}"
+  cd "${srcdir}/${_casename}-${pkgver}"
 
   install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
